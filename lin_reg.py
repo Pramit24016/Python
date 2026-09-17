@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import StandardScaler
-epoch=1000
+epoch=10000
 df=pd.read_csv('house_price.csv')
 df=df.drop(columns=['Location','Condition','Garage'])
 df=df.dropna()

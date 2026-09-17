@@ -19,7 +19,7 @@ X_test=scaler.transform(X_test)
 k=1
 def distance(a,b):
 	d=0
-	for i in range(6):
+	for i in range(1,6):
 		d=d+(a[i]-b[i])**2
 	return d
 y_pred=[]
@@ -36,7 +36,7 @@ for y in X_test:
 	y_pred.append(avg)
 
 mse=mean_squared_error(y_pred,y_test)
-#print(f"RMSE:{np.sqrt(mse)}")
+print(f"RMSE:{np.sqrt(mse)}")
 X_train_100=X_train[100]
 m=[]
 for id,z in enumerate(X_train):

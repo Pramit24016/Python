@@ -5,6 +5,7 @@ df1.loc[:,'Internal Marks']=df1['Marks']*0.25
 df1.loc[:,'Final Marks']=df1['Marks']
 df1=df1.drop(columns="Marks")
 df1=df1.dropna()
+print(f'\n\nNumber of unique values:{df1.nunique().sum()}')
 print(f'Number of rows:{df1.shape[0]}\nNumber of columns:{df1.shape[1]}\n\n')
 print(df1.info())
 print('\n\nNumber of duplicate data:',df1.duplicated().sum())
